@@ -24,8 +24,9 @@ html, body {
 
 body {
   overflow: hidden;
-  background: rgb(34,193,195);
-  background: linear-gradient(0deg, rgba(34,193,195,1) 0%, rgba(253,187,45,1) 100%);
+  background-image: url(../img/background.jpg);
+  background-repeat: no-repeat, repeat;
+  background-size: cover;
 }
 
 /* width */
@@ -43,12 +44,6 @@ body {
 ::-webkit-scrollbar-thumb {
   background: #888;
 }
-
-/* Handle on hover */
-::-webkit-scrollbar-thumb:hover {
-  background: #555;
-}
-
 
 .icon {
     position: absolute;
@@ -103,10 +98,6 @@ body {
   text-align: right;
   width: auto;
   background-color: var(--colorbox);
-}
-
-img:hover {
-  box-shadow: 0 0 10px 1px rgba(0, 0, 0, 0.5);
 }
 
 table {
