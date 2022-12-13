@@ -1,0 +1,138 @@
+:root {
+  --top : 20%;
+  --colorbox : rgb(255,255,255,0.1)
+}
+
+h1 {
+  text-align: center;
+  font-size: 1em;
+  color: rgb(0, 0, 0);
+  margin-bottom: 1em;
+}
+
+h2 {
+  text-align: center;
+  color: rgb(0, 0, 0);
+  margin-bottom: 1em;
+}
+/* 
+!body
+*/
+html, body {
+    min-height: 100%;
+}
+
+body {
+  overflow: hidden;
+  background: rgb(34,193,195);
+  background: linear-gradient(0deg, rgba(34,193,195,1) 0%, rgba(253,187,45,1) 100%);
+}
+
+/* width */
+::-webkit-scrollbar {
+  width: 10px;
+  display: none;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #888;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+
+.icon {
+    position: absolute;
+    top: 1%;
+    left: 1%;
+    height: 100px;
+    width : height;
+}
+
+.food {
+  position: absolute;
+  height: 400px;
+  width: auto;
+  top: var(--top);
+  left: 1%;
+}
+
+.other {
+  position: absolute;
+  height:300px;
+  width:160px;
+  white-space: pre-line;
+  overflow: scroll;
+  top: var(--top);
+  left: 90%;
+  background-color: var(--colorbox);
+}
+
+.recipes {
+  margin: auto;
+  width: 25%;
+  white-space: pre-line;
+  overflow: scroll;
+  background-color: var(--colorbox);
+}
+
+.center {
+  margin: auto;
+  text-align: center;
+  width: 25%;
+  background-color: var(--colorbox);
+}
+
+.right {
+  position:absolute;
+  right: 10px;
+  background-color: var(--colorbox);
+}
+
+.right2 {
+  margin: auto;
+  text-align: right;
+  width: auto;
+  background-color: var(--colorbox);
+}
+
+img:hover {
+  box-shadow: 0 0 10px 1px rgba(0, 0, 0, 0.5);
+}
+
+table {
+  margin: .3em;
+  width: 290px;
+}
+  
+th {
+  padding-left: .5em;
+  padding-right: .5em;
+  border: 1px solid rgb(0, 0, 0);
+  background-color: rgb(255, 255, 255);
+}
+  
+td {
+  padding-left: .5em;
+  padding-right: .5em;
+  border: 1px solid #900;
+  background-color: #ffc;
+}
+  
+#trHeader {
+  text-decoration: underline;
+  color: #900;
+}
+  
+.centerCell {
+  text-align: left;
+}
