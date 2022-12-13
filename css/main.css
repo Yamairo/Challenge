@@ -1,0 +1,78 @@
+body{
+    background-image: url('../img/background.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+.save-middle{
+    color: white;
+    font-size: 70px;
+    padding-top: 270px;
+    padding-left: 800px;
+    font-family: 'Lucida Sans';
+    font-weight: 800;
+}
+.icon{
+    height: 150px;
+}
+.button-middle{
+    height: 50px;
+    color: white;
+    width: 150px;
+    height: 60px;
+    background-color: transparent;
+    border-color: white;
+    cursor: pointer;
+    border-radius: 4px;
+    font-size: 18px;
+    margin-right: 2px;
+    
+}
+.bottom{
+    padding-left: 15px;
+}
+.nav{
+   display: flex;
+   flex-direction: row;
+    
+}
+.button-nav{
+    height: 50px;
+    color: white;
+    width: 100px;
+    background-color: transparent;
+    border-color: white;
+    cursor: pointer;
+    border-radius: 4px;
+    font-size: 18px;
+    margin-right: 20px;
+    margin-top: 45px;
+    width: 150px;
+    border-bottom: none;
+    border-top: none;
+    border-left: none;
+    border-radius: none;
+}
+.login-button{
+    height: 50px;
+    color: white;
+    width: 100px;
+    background-color: transparent;
+    border-color: white;
+    cursor: pointer;
+    border-radius: 4px;
+    font-size: 18px;
+    margin-right: 20px;
+    margin-top: 45px;
+    width: 150px;
+    border-bottom: none;
+    border-top: none;
+    border-left: none;
+    border-radius: none;
+    border-right: none;
+    font-weight: 800;
+}
+.login{
+    padding-left: 400px;
+    
+}

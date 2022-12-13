@@ -5,17 +5,19 @@
     </head>
     <body>
         <script src="javascript/validateLogin.js" ></script>
-        <form name="login" action="challenge.html" onsubmit="saveData();return isNietLeeg()">
-            <link href="css/login.css" rel="stylesheet">
-            <div class="centered">
-            <label for="fname">First name</label><br>
-            <input type="text" id="fname" name="fname"><br>
-            <label for="email">Email-adres</label><br>
-            <input type="text" id="email" name="email"><br>
-            <label for="pword">Password</label><br>
-            <input type="password" id="pword" name="pword"><br>
-            <input type="submit" value="Submit"><br>
-            </div>
-        </form>
+        <div>
+            <form name="login" action="challenge.html" onsubmit="saveData();return isNietLeeg()">
+                <link href="css/login.css" rel="stylesheet">
+                <div class="centered input">
+                <label for="fname">First name</label><br>
+                <input type="text" id="fname" name="fname"><br>
+                <label for="email">Email-adres</label><br>
+                <input type="text" id="email" name="email"><br>
+                <label for="pword">Password</label><br>
+                <input type="password" id="pword" name="pword"><br>
+                <input type="submit" value="Submit"><br>
+                </div>
+            </form>
+        </div>
     </body>
 </html>
