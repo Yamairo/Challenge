@@ -23,6 +23,7 @@ html, body {
 }
 
 body {
+  background-color: black;
   overflow: hidden;
   background-image: url(../img/background.jpg);
   background-repeat: no-repeat, repeat;
