@@ -1,0 +1,19 @@
+body {
+    background-image: url("Just Eat It.png");
+    background-repeat: no-repeat, repeat;
+    background-color: #934040;
+}
+
+
+label {
+    color: #ffffff;
+}
+
+.centered {
+    position: fixed; 
+    top: 50%;
+    left: 50%;
+    width: 10%;
+    transform: translate(-50%, -50%);
+    background-color: var(--colorbox);
+  }
