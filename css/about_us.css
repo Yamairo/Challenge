@@ -1,0 +1,44 @@
+body {
+background-color: black;
+overflow: hidden;
+background-image: url(../img/background.jpg);
+background-repeat: no-repeat, repeat;
+background-size: cover;
+}
+
+h1 {
+margin: auto;
+text-align: center;
+font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+
+div-center {
+display: flex;
+justify-content: center;
+align-items: center;
+padding: 10%;
+}
+
+p {
+color: aliceblue;
+width: auto;
+background-color: rgb(0,0,0,0.3);
+font: sans-serif;
+}
+
+.container {
+    display: flex;
+    justify-content:space-between;
+    background-color: black;
+}
+
+img {
+    margin-right: 20px;
+}
+
+.imagebox {
+width: auto;
+height: 200px;
+border: 3px;
+border-color: black;
+}
