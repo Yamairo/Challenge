@@ -5,6 +5,29 @@ body{
     background-repeat: no-repeat;
     background-attachment: fixed;
 }
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
+}
+
+li {
+    display: list-item;
+    text-align: -webkit-match-parent;
+}
+
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px;
+    background-color: rgb(0, 0, 0, 0.9);
+    color: #fff;
+}
+
 .save-middle{
     color: white;
     font-size: 70px;
@@ -32,11 +55,7 @@ body{
 .bottom{
     padding-left: 15px;
 }
-.nav{
-   display: flex;
-   flex-direction: row;
-    
-}
+
 .button-nav{
     height: 50px;
     color: white;

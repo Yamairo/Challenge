@@ -5,8 +5,12 @@ Also some organisational information that concerns this repository will be added
 - [ ] add recipes tab
 - [ ] add to good to go feature
 - [ ] add camera functionality
+- [ ] product page
+- [ ] promo video on home page
+- [ ] logo on login page
 ## In progress
 - [ ] add all group members to repository
+- [ ] about us
 ## Done ✓
 - [x] create repository
 - [x] create READ.me
