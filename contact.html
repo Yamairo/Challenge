@@ -8,9 +8,35 @@
     <link rel="stylesheet" href="css/contact.css">
 </head>
 <body>
-    <div header>
-        <p>CONTACT</p>
+    <div class="navbar">
+        <img class="icon" src="img/logo.png" alt="logo">
+        <p class="name" style="margin-left:700px ;margin-right: 100px;font-size: 40px;color: white;font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;">FoodAlarm</p>
+        <button class="button-nav" onclick="document.location='website.html'">HOME</button>
+        <button class="button-nav">PRODUCT</button>
+        <button class="button-nav" onclick="document.location='about_us.html'">ABOUT US</button>
+        <button class="button-nav" onclick="document.location='contact.html'">CONTACT</button>
+        <div class="login">
+            <button onclick="document.location='login.html'" class="login-button">
+                LOGIN
+            </button>
+        </div>
     </div>
-    
+    <div class="header">
+        <p>CONTACT</p>       
+    </div>
+    <div>
+
+    </div>
+    <form action="/submit-form" method="post">
+        <label for="name">Name:</label><br>
+        <input type="text" id="name" name="name"><br>
+        <label for="email">Email:</label><br>
+        <input type="email" id="email" name="email"><br>
+        <label for="subject">Subject:</label><br>
+        <input type="text" id="subject" name="subject"><br>
+        <label for="message">Message:</label><br>
+        <textarea id="message" name="message"></textarea><br>
+        <input type="submit" value="Submit">
+      </form> 
 </body>
 </html>
