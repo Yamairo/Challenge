@@ -26,6 +26,9 @@ li {
     padding: 20px;
     background-color: rgb(0, 0, 0, 0.9);
     color: #fff;
+    margin-top: -10px;
+    margin-left:-10px;
+    margin-right:-10px;
 }
 
 .save-middle{
