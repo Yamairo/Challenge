@@ -7,6 +7,11 @@ body {
     background-color: gainsboro;
 }
 
+a:link { text-decoration: none; }
+a:visited { text-decoration: none; }
+a:hover { text-decoration: none; }
+a:active { text-decoration: none; }
+
 .navbar {
     display: flex;
     align-items: center;
@@ -20,23 +25,18 @@ body {
     border-top: none;
 }
 
-button :hover{
-    color: aqua;
+.button-nav[id="btn"]{
+    background-color: var(--color);
 }
 
-/* .button-nav[id="btn"]{
-    background-color: var(--color);
-} */
-
 .button-nav{
-    height: 100px;
+    padding-top: 3%;
+    padding-bottom: 3%;
+    text-align: center;
     color: rgb(0, 0, 0);
     width: 100px;
     background-color: var(--background);
     border: 0ch;
     cursor: pointer;
-    font-size: 18px;
-    margin-right: 20px;
-    margin-top: 0px;
-    width: 150px;
+    font-size: 15px;
 }
