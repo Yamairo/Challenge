@@ -1,3 +1,4 @@
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -8,11 +9,28 @@
 </head>
 <body>
     <nav class="navbar">
-        <a class="button-nav" href="app_homescreen.html">HOME</a>
-        <a class="button-nav" href="recipes.html">RECIPES</a>
-        <a class="button-nav" href="shopping_list.html">SHOPPING LIST</a>
-        <a class="button-nav" href="sharing_is_caring.html">SHARING IS CARING</a>
-        <a class="button-nav" href="fridge_contents.html">FRIDGE CONTENTS</a>
+        <!-- Alle paginas komen in divs te staan zodat er niet voor elke pagina een bestand is -->
+        <!-- Werkt nog niet -->
+        <!--TODO huidige bladzijde laten zien  -->
+        <div id="home">
+            <a class="button-nav" href="#" onclick="return show('recipes', 'shopping_list', 'sharing_is_caring', 'fridge_contents', 'home')">HOME</a>
+        </div>
+
+        <div id="recipes">
+            <a class="button-nav" href="#" onclick="return show('recipes', 'shopping_list', 'sharing_is_caring', 'fridge_contents', 'home')"></a>RECIPES</a>
+        </div>
+
+        <div id="shopping_list">
+            <a class="button-nav" href="#" onclick="return show('shopping_list', 'sharing_is_caring', 'fridge_contents', 'recipes', 'home')">SHOPPING LIST</a>
+        </div>
+
+        <div id="sharing_is_caring">
+            <a class="button-nav" href="#" onclick="return show('sharing_is_caring', 'fridge_contents', 'shopping_list', 'recipes', 'home')">SHARING IS CARING</a>
+        </div>
+
+        <div id="fridge_contents">
+            <a class="button-nav" href="#" onclick="return show('fridge_contents', 'sharing_is_caring', 'shopping_list', 'recipes', 'home')">FRIDGE CONTENTS</a>
+        </div>
         <script src="javascript/activebutton.js"></script>
     </nav>
 </body>
