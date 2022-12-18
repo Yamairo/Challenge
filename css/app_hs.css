@@ -12,9 +12,15 @@ body {
 }
 
 img {
+    filter: grayscale(50%) invert(80%) brightness(95%) hue-rotate(180deg);
     padding-right: 120px;
     height: var(--height);
     width: auto;
+}
+
+.center {
+    margin: auto;
+    padding: 50%;
 }
 
 #menu {
