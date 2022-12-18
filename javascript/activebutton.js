@@ -1,14 +1,18 @@
-document.querySelectorAll(".button-nav").forEach(
+document.querySelectorAll(".nav-link").forEach(
     link=>{
-        if(link.href===window.location.hre){
-            link.setAttribute("btn", "page")
+        console.log("link: " +link.href)
+        console.log("window: " + window.location.href)
+        if(link.href===window.location.href){
+            link.setAttribute("id", "page")
         }
     }
 )
 
-function show(shown, ...hidden) {
-    console.log(shown)
-    document.getElementById(shown).style.display='block';
-    document.getElementById(hidden).style.display='none';
-    return false;
+function updatemenu() {
+    if (document.getElementById('responsive-menu').checked == true) {
+      document.getElementById('menu').style.borderBottomRightRadius = '0';
+      document.getElementById('menu').style.borderBottomLeftRadius = '0';
+    }else{
+      document.getElementById('menu').style.borderRadius = '10px';
+    }
 }
