@@ -1,21 +1,124 @@
 :root {
-    --height : 100px;
+    --height : 10vh;
     --color : rgb(0, 94, 11);
+    --filter : brightness(50%);
+    --padding1 : 1vh;
+    --padding2 : 4vh;
 }
 
 .nav-link [id="page"] {
     background-color: var(--color);
 }
 
-body {
-    background-color: rgb(12, 2, 44);
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: rgb(0, 0, 0, 0.9);
+    color: #fff;
+    margin-right:-10px;
+    border: #ffffff;
+    border-width: 5px;
 }
 
-img {
+body {
+    background-color: E3E3E3;
+}
+
+.container {
+    display: flex;
+    overflow: hidden;
+    position: relative;
+    color: rgb(255, 255, 255);
+    text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 30px;
+}
+
+a {
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+    text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 30px;
+}
+
+.bottom-right-img {
+    filter: var(--filter);
+    width: 78vh;
+    height: 41vh;
+}
+
+.top-left-img{
+    height: 38vh;
+    width: 38vh;
+    filter: var(--filter);
+    padding-top: var(--padding2);
+    padding-bottom: var(--padding1);
+    padding-left: var(--padding1);
+}
+
+.left-img {
+    height: 50%;
+    width: 54%;
+    filter: var(--filter);
+    padding-left: var(--padding2);
+    padding-top: var(--padding2);
+    padding-right: var(--padding1);
+}
+
+.left-img img {
+    height: 50%;
+    width: 54%;
+    filter: var(--filter);
+    padding-left: var(--padding2);
+    padding-top: var(--padding2);
+    padding-right: var(--padding1);
+}
+
+img[id="squares"]:hover {
+    filter: brightness(70%);
+}
+
+.centered {
+    position: absolute;
+    top: 50%;
+    left: 27%;
+    transform: translate(-50%, -50%);
+}
+
+.bottom-right {
+    position: absolute;
+    top: 75%;
+    left: 77%;
+    transform: translate(-50%, -50%);
+}
+
+.top-right1 {
+    position: absolute;
+    top: 50%;
+    left: 25%;
+    transform: translate(-50%, -50%);
+}
+
+.top-right2 {
+    position: absolute;
+    top: 50%;
+    left: 75%;
+    transform: translate(-50%, -50%);
+}
+
+.logo {
     filter: grayscale(50%) invert(80%) brightness(95%) hue-rotate(180deg);
     padding-right: 120px;
     height: var(--height);
     width: auto;
+}
+
+
+h1 {
+    color: #5e2f2f;
+    text-align: center;
 }
 
 .center {
@@ -27,8 +130,8 @@ img {
 	background: #000000;
 	color: #FFF;
 	height: var(--height);
-	padding-left: 18px;
 	border-radius: 10px;
+    overflow: hidden;
 }
 #menu ul, #menu li {
 	margin: 0 auto;

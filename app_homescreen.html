@@ -10,21 +10,51 @@
 <body>
     <nav>
         <nav id='menu'>
-            <input type='checkbox' id='responsive-menu' onclick='updatemenu()'><label></label>
+            <input type='checkbox' id='responsive-menu' onclick='updatemenu()'>
             <ul>
-                <li><img src="img/logo.png" alt=""></li>
-                <li class="nav-link"><a class="nav-link"  href='app_homescreen.html'>Home</a></li>
-                <li class="nav-link"><a class="nav-link" href='fridge_contents.html'>Fridge contents</a></li>
-                <li class="nav-link"><a class="nav-link" href='sharing_is_caring.html'>Sharing is caring</a></li>
-                <li class="nav-link"><a class="nav-link" href='shopping_list.html'>Shopping list</a></li>
-                <li class="nav-link"><a class="nav-link" href='recipes.html'>Recipes</a></li>
+                <li>
+                    <img class="logo" src="img/logo.png" alt="">
+                </li>
+                <li class="nav-link">
+                    <a class="nav-link"  href='app_homescreen.html'>Home</a>
+                </li>
+                <li class="nav-link">
+                    <a class="nav-link" href='fridge_contents.html'>Fridge contents</a>
+                </li>
+                <li class="nav-link">
+                    <a class="nav-link" href='sharing_is_caring.html'>Sharing is caring</a>
+                </li>
+                <li class="nav-link">
+                    <a class="nav-link" href='shopping_list.html'>Shopping list</a>
+                </li>
+                <li class="nav-link">
+                    <a class="nav-link" href='recipes.html'>Recipes</a>
+                </li>
             </ul>
+
+            </div>
           </nav>
           <!-- Hier komt site specefieke informatie te staan -->
-          <div>
-            <h1>This is the home screen</h1>
+          <div class="">
+            <div class="container">
+                <div class="centered">What is in my fridge ?</div>
+                <img id="squares" class="left-img" src="img/koelkast.png" alt="">
+                <a class="centered" href="fridge_contents.html">What is in my fridge ?</a>
+                <div>
+                    <div class="container">
+                        <img id="squares" class="top-left-img" src="img/recipes.png" alt="">
+                        <img id="squares" class="top-left-img"  src="img/kipfilet.png" alt="">
+                        <a class="top-right1" href="shopping_list.html">Recipes</a>
+                        <a class="top-right2" href="shopping_list.html">Share your food</a>
+                    </div>
+                    <div>
+                        <img id="squares" class="bottom-right-img" src="img/shopping_list.png" alt="">
+                        <a class="bottom-right" href="shopping_list.html">Go to your shopping list!</a>
+                    </div>
+                </div>
+            </div>
           </div>
         <script src="javascript/activebutton.js"></script>
-    </nav>
+        </nav>
 </body>
 </html>
