@@ -35,11 +35,11 @@ body {
 
 .empty-box2 {
     text-align: center;
-    width: 80vh;
+    width: 92vh;
     height: 76vh;
-    padding-top: 100%;
+    padding-top: 80%;
     padding-left: 25%;
-    padding-right: 11%;
+    padding-right: 25%;
 }
 
 .empty-box3 {
@@ -72,7 +72,7 @@ a {
 .bottom-right-img {
     filter: var(--filter);
     width: 78vh;
-    height: 41vh;
+    height: 44vh;
 }
 
 .top-left-img{
@@ -85,13 +85,13 @@ a {
 
 .left-img {
     height: 100%;
-    width: 90%;
+    width: 100%;
     filter: var(--filter);
     padding-top: var(--padding2);
 }
 
-img[id="squares"]:hover {
-    filter: brightness(70%);
+a:hover {
+    text-decoration: underline;
 }
 
 .centered {
