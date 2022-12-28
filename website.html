@@ -5,35 +5,50 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Food alarm©</title>
-    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/website.css">
 </head>
 <body>
     <!-- !page is zoomed in -->
     <!-- @graige1011 -->
-    <div class="navbar">
-        <img class="icon" src="img/logo.png" alt="logo">
-        <p class="name" style="margin-left:700px ;margin-right: 100px;font-size: 300%;color: white;font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;">FoodAlarm</p>
-        <button class="button-nav">HOME</button>
-        <button class="button-nav" onclick="document.location='product.html'">PRODUCT</button>
-        <button class="button-nav" onclick="document.location='about_us.html'">ABOUT US</button>
-        <button class="button-nav" onclick="document.location='contact.html'">CONTACT</button>
-        <div class="login">
-            <button onclick="document.location='login.html'" class="login-button">
-                LOGIN
-            </button>
-        </div>
-    </div>
-
+    <nav>
+        <nav id='menu'>
+            <input type='checkbox' id='responsive-menu' onclick='updatemenu()'>
+            <ul>
+                <li>
+                    <img class="logo" src="img/logo.png" alt="">
+                </li>
+                <li class="name" >
+                    <p class="name" >FoodAlarm</p>
+                </li>
+            <div class="centermenu">
+                <li class="nav-link">
+                    <a class="nav-link"  href='product.html'>PRODUCT</a>
+                </li>
+                <li class="nav-link">
+                    <a class="nav-link" href='about_us.html'>ABOUT US</a>
+                </li>
+                <li class="nav-link">
+                    <a class="nav-link" href='contact.html'>CONTACT</a>
+                </li>
+            </div>
+            <div style="padding-left: 93%;">
+                <li class="nav-link">
+                    <a class="nav-link" href='login.html'>LOGIN</a>
+                </li>
+            </div>
+            </ul>
+          </nav>
+        </nav>
     <div class="save-middle">
          <div>
             <div class="top">
                 <p>
-                    Lets Save The Planet
+                    Lets Save The Planet !
                 </p>
             </div>
             <div class="middle">
                 <p>
-                    Scan Save Earn!
+                    Scan Save Earn
                  </p>
             </div>
             <div class="bottom">
