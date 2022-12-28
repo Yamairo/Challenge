@@ -7,10 +7,9 @@
     <link rel="stylesheet" href="css/app_hs.css">
     <title>FoodAlarm</title>
 </head>
-<body>
+<body onload="updatemenu()">
     <nav>
         <nav id='menu'>
-            <input type='checkbox' id='responsive-menu' onclick='updatemenu()'>
             <ul>
                 <li>
                     <img class="logo" src="img/logo.png" alt="">
@@ -33,6 +32,7 @@
             </ul>
 
             </div>
+            <script src="javascript/activebutton.js"></script>
           </nav>
           <!-- Hier komt site specefieke informatie te staan -->
           <div>
@@ -55,7 +55,6 @@
                 </div>
             </div>
           </div>
-          <script src="javascript/activebutton.js"></script>
         </nav>
 </body>
 </html>
