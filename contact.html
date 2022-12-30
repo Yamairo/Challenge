@@ -8,19 +8,44 @@
     <link rel="stylesheet" href="css/contact.css">
 </head>
 <body>
-    <div class="navbar">
-        <img class="icon" src="img/logo.png" alt="logo">
-        <p class="name" style="margin-left:700px ;margin-right: 100px;font-size: 40px;color: white;font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;">FoodAlarm</p>
-        <button class="button-nav" onclick="document.location='website.html'">HOME</button>
-        <button class="button-nav">PRODUCT</button>
-        <button class="button-nav" onclick="document.location='about_us.html'">ABOUT US</button>
-        <button class="button-nav" onclick="document.location='contact.html'">CONTACT</button>
-        <div class="login">
-            <button onclick="document.location='login.html'" class="login-button">
-                LOGIN
-            </button>
+    <nav>
+        <nav id='menu'>
+            <input type='checkbox' id='responsive-menu' onclick='updatemenu()'>
+            <ul>
+                <li>
+                    <img class="logo" src="img/logo.png" alt="">
+                </li>
+                <li class="name" >
+                    <p class="name" >FoodAlarm</p>
+                </li>
+            <div class="centermenu">
+                <li class="nav-link">
+                    <a class="nav-link"  href='product.html'>PRODUCT</a>
+                </li>
+                <li class="nav-link">
+                    <a class="nav-link" href='about_us.html'>ABOUT US</a>
+                </li>
+                <li class="nav-link">
+                    <a class="nav-link" href='contact.html'>CONTACT</a>
+                </li>
+            </div>
+            <div style="padding-left: 93%;">
+                <li class="nav-link">
+                    <a class="nav-link" href='login.html'>LOGIN</a>
+                </li>
+            </div>
+            </ul>
+          </nav>
+        </nav>
+        <div class="dropdown">
+            <button class="dropbtn" style="width: 100%;">≡</button>
+            <div class="dropdown-content">
+                <a class="nav-link"  href='product.html'>PRODUCT</a>
+                <a class="nav-link" href='about_us.html'>ABOUT US</a>
+                <a class="nav-link" href='contact.html'>CONTACT</a>
+                <a class="nav-link" href='login.html'>LOGIN</a>
+            </div>
         </div>
-    </div>
     <div class="header">
         <p>CONTACT</p>       
     </div>
