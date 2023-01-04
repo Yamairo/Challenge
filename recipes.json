@@ -17,5 +17,12 @@
     "ingredients": ["brood", "kaas"],
     "url": "img/Tosti.png",
     "href": ""
+  },
+  {
+    "name": "Steak",
+    "description": "Een heerlijk recept voor het bereiden van steak",
+    "ingredients": ["steak", "peper", "zout", "roosmarijn", "tijm", "roomboter"],
+    "url": "img/Steak.png",
+    "href": ""
   }
 ]
