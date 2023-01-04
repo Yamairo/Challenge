@@ -1,0 +1,9 @@
+.recipe-card {
+    display: inline-block;
+    width: 33%;
+    text-align: center;
+  }
+  .recipe-card img {
+    width: auto;
+    height: 30vh;
+  }

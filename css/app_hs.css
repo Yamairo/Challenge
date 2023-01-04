@@ -54,6 +54,10 @@ body {
     padding-bottom: 17%;
 }
 
+.food {
+    height: 20vh;
+}
+
 .container {
     display: flex;
     overflow: hidden;

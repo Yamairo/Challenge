@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/app_hs.css">
+    <link rel="stylesheet" href="css/recipes.css">
     <title>Recipes</title>
 </head>
 <body>
@@ -35,7 +36,34 @@
           <!-- Hier komt site specefieke informatie te staan -->
           <div>
             <h1>Recipes</h1>
-          </div>
+    <div>
+        <script>
+            // Obtain the JSON data from the "recipes.json" file
+            fetch("recipes.json")
+              .then(response => response.json())
+              .then(recipes => {
+                // Iterate over the array of recipes
+                for (const recipe of recipes) {
+                  // Extract the name, description, URL, and href of the recipe
+                  const { name, description, url, href } = recipe;
+    
+                  // Create a new div element for the recipe card
+                  const div = document.createElement("div");
+                  div.classList.add("recipe-card");
+    
+                  // Add the name, description, and image to the recipe card
+                  div.innerHTML = `
+                    <h2>${name}</h2>
+                    <p>${description}</p>
+                    <a href="${href}"><img src="${url}" alt="${name}"></a>
+                  `;
+    
+                  // Append the recipe card to the document
+                  document.body.appendChild(div);
+                }
+              });
+          </script>
+    </div>
         <script src="javascript/activebutton.js"></script>
     </nav>
 </body>

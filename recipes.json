@@ -1,0 +1,21 @@
+[  {"name": "Chocoladecake",
+    "description": "Een rijke en vochtige chocoladecake met chocolade frosting.",
+    "ingredients": ["meel", "suiker", "eieren", "chocolade"],
+    "url": "img/chocoladecake.png",
+    "href": ""
+  },
+  {
+    "name": "Spaghetti Bolognese",
+    "description": "Een klassiek Italiaans gerecht gemaakt met gehakt, tomaten en pasta.",
+    "ingredients": ["spaghetti", "gehakt", "tomatensaus", "ui", "knoflook"],
+    "url": "img/spaghetti_bolognese.png",
+    "href": ""
+  },
+  {
+    "name": "Tosti",
+    "description": "Een eenvoudig maar heerlijk sandwich gemaakt met brood en kaas.",
+    "ingredients": ["brood", "kaas"],
+    "url": "img/Tosti.png",
+    "href": ""
+  }
+]

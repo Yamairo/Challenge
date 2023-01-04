@@ -1,6 +1,5 @@
 document.querySelectorAll(".nav-link").forEach(
     link=>{
-      console.log(link.href)
       console.log(window.location.href)
         if(link.href===window.location.href){
             link.setAttribute("id", "page")
