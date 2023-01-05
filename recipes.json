@@ -1,28 +1,17 @@
-[  {"name": "Chocoladecake",
-    "description": "Een rijke en vochtige chocoladecake met chocolade frosting.",
-    "ingredients": ["meel", "suiker", "eieren", "chocolade"],
+[
+  {
+    "name": "Chocolate Cake",
+    "description": "A rich and moist chocolate cake with chocolate frosting.",
+    "ingredients": ["flour", "sugar", "eggs", "chocolate"],
+    "instructions": [
+      "Preheat the oven to 350°F (180°C).",
+      "In a large mixing bowl, combine the flour, sugar, and eggs.",
+      "Melt the chocolate in a microwave-safe bowl or in a double boiler and add it to the mixing bowl.",
+      "Pour the batter into a greased 9x13-inch baking pan.",
+      "Bake for 30-35 minutes or until a toothpick inserted into the center comes out clean.",
+      "Let the cake cool before frosting with chocolate frosting."
+    ],
     "url": "img/chocoladecake.png",
-    "href": ""
-  },
-  {
-    "name": "Spaghetti Bolognese",
-    "description": "Een klassiek Italiaans gerecht gemaakt met gehakt, tomaten en pasta.",
-    "ingredients": ["spaghetti", "gehakt", "tomatensaus", "ui", "knoflook"],
-    "url": "img/spaghetti_bolognese.png",
-    "href": ""
-  },
-  {
-    "name": "Tosti",
-    "description": "Een eenvoudig maar heerlijk sandwich gemaakt met brood en kaas.",
-    "ingredients": ["brood", "kaas"],
-    "url": "img/Tosti.png",
-    "href": ""
-  },
-  {
-    "name": "Steak",
-    "description": "Een heerlijk recept voor het bereiden van steak",
-    "ingredients": ["steak", "peper", "zout", "roosmarijn", "tijm", "roomboter"],
-    "url": "img/Steak.png",
-    "href": ""
+    "href": "ChocolateCake.html"
   }
 ]

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+      /* Add some styling for the recipe page */
+      h1 {
+        text-align: center;
+      }
+      p {
+        font-size: 18px;
+      }
+      ol {
+        list-style-type: decimal;
+        margin: 0;
+        padding: 0;
+      }
+      li {
+        margin: 10px 0;
+        padding-left: 20px;
+      }
+    </style>
+  </head>
+  <body>
+    <h1 id="recipe-name"></h1>
+    <p id="recipe-description"></p>
+    <h2>Ingredients</h2>
+    <ul id="recipe-ingredients"></ul>
+    <h2>Instructions</h2>
+    <ol id="recipe-instructions"></ol>
+    <script>
+      // Obtain the JSON data from the "recipes.json" file
+      fetch("recipes.json")
+        .then(response => response.json())
+        .then(recipes => {
+          // Extract the name of the recipe from the URL
+          const recipeName = window.location.search.substring(1);
+
+          // Find the recipe with the matching name
+          const recipe = recipes.find(recipe => recipe.name === recipeName);
+
+          // Extract the name, description, ingredients, and instructions of the recipe
+          const { name, description, ingredients, instructions } = recipe;
+
+          // Update the page with the recipe information
+          document.getElementById("recipe-name").textContent = name;
+          document.getElementById("recipe-description").textContent = description;
+          ingredients.forEach(ingredient => {
+            const li = document.createElement("li");
+            li.textContent = ingredient;
+            document.getElementById("recipe-ingredients").appendChild(li);
+          });
+          instructions.forEach(instruction => {
+            const li = document.createElement("li");
+            li.textContent = instruction;
+            document.getElementById("recipe-instructions").appendChild(li);
+          });
+        });
+    </script>
+  </body>
+</html>

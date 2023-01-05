@@ -17,3 +17,16 @@
     width: auto;
     height: 30vh;
   }
+
+  @media (max-width: 600px) {
+    .recipe-card {
+      width: 100%;
+    }
+  }
+  .recipe-card img {
+    width: auto;
+    height: 200px;
+    display: block;
+    margin: 0 auto;
+    max-width: 300px;
+  }
