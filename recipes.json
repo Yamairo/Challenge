@@ -13,5 +13,135 @@
     ],
     "url": "img/chocoladecake.png",
     "href": "ChocolateCake.html"
-  }
+  },
+  {
+    "name": "Grilled Steak",
+    "description": "A juicy and flavorful steak cooked to perfection on the grill.",
+    "ingredients": ["steak", "salt", "pepper", "olive oil", "garlic"],
+    "instructions": [
+    "Preheat the grill to high heat.",
+    "Sprinkle the steak with salt and pepper on both sides.",
+    "Brush the steak with olive oil and press minced garlic onto the steak.",
+    "Grill the steak for 4-5 minutes per side for medium-rare, or longer for desired doneness.",
+    "Let the steak rest for a few minutes before slicing and serving."
+    ],
+    "url": "img/grilledsteak.png",
+    "href": "GrilledSteak.html"
+    },
+    {
+      "name": "Pepperoni Pizza",
+      "description": "A classic pizza with a crispy crust and loaded with pepperoni and mozzarella cheese.",
+      "ingredients": ["pizza dough", "tomato sauce", "mozzarella cheese", "pepperoni"],
+      "instructions": [
+      "Preheat the oven to 425°F (220°C).",
+      "Roll out the pizza dough to desired thickness and place on a greased baking sheet.",
+      "Spread tomato sauce evenly over the dough, leaving a small border for the crust.",
+      "Sprinkle mozzarella cheese and pepperoni over the sauce.",
+      "Bake for 15-20 minutes or until the crust is golden brown and the cheese is melted and bubbly.",
+      "Remove from the oven and let cool for a few minutes before slicing and serving."
+      ],
+      "url": "img/pepperonipizza.png",
+      "href": "PepperoniPizza.html"
+      },
+      {
+        "name": "Spaghetti Bolognese",
+        "description": "A traditional Italian dish made with spaghetti, meat sauce, and grated parmesan cheese.",
+        "ingredients": ["spaghetti", "ground beef", "tomato sauce", "onion", "garlic", "carrots", "oregano", "parmesan cheese"],
+        "instructions": [
+        "Bring a large pot of salted water to a boil and cook the spaghetti according to package instructions.",
+        "In a separate pan, brown the ground beef over medium heat until fully cooked.",
+        "Add diced onion, minced garlic, and grated carrots to the pan and cook for a few minutes.",
+        "Add the tomato sauce and oregano and simmer for 10-15 minutes.",
+        "Drain the cooked spaghetti and add it to the meat sauce.",
+        "Toss until the spaghetti is coated with the sauce.",
+        "Serve with grated parmesan cheese on top."
+        ],
+        "url": "img/spaghettibolognese.png",
+        "href": "SpaghettiBolognese.html"
+        },
+        {
+          "name": "Classic Grilled Cheese",
+          "description": "A simple yet delicious sandwich made with toasted bread and melted cheese.",
+          "ingredients": ["bread", "butter", "cheddar cheese"],
+          "instructions": [
+          "Butter one side of each slice of bread.",
+          "Place a slice of cheddar cheese between the two slices of bread, buttered side out.",
+          "In a pan over medium heat, grill the sandwich until the bread is toasted and the cheese is melted.",
+          "Remove from the pan and let cool for a few minutes before slicing and serving."
+          ],
+          "url": "img/grilledcheese.png",
+          "href": "ClassicGrilledCheese.html"
+          },
+          {
+            "name": "Tofu Stir Fry",
+            "description": "A flavorful and healthy dish made with crispy tofu and a variety of vegetables.",
+            "ingredients": ["tofu", "soy sauce", "cornstarch", "vegetable oil", "bell peppers", "onion", "carrots", "ginger", "garlic"],
+            "instructions": [
+            "Drain the tofu and press out any excess water.",
+            "Cut the tofu into cubes and toss with soy sauce and cornstarch.",
+            "In a pan or wok, heat the vegetable oil over high heat.",
+            "Add the tofu and cook until crispy, about 5 minutes.",
+            "Remove the tofu from the pan and set aside.",
+            "In the same pan, add diced bell peppers, onion, and grated carrots. Sauté for 2-3 minutes.",
+            "Add minced ginger and garlic and sauté for an additional minute.",
+            "Return the tofu to the pan and toss with the vegetables to combine.",
+            "Serve with rice or noodles."
+            ],
+            "url": "img/tofustirfry.png",
+            "href": "TofuStirFry.html"
+            },
+            {
+              "name": "Sesame Noodles",
+              "description": "A savory and satisfying dish made with noodles, vegetables and a delicious sesame sauce.",
+              "ingredients": ["linguine noodles", "carrots", "bell peppers", "green onions", "sesame oil", "soy sauce", "ginger", "garlic", "sesame seeds"],
+              "instructions": [
+              "Cook the linguine noodles according to package instructions.",
+              "Drain and rinse the noodles in cold water to stop the cooking process.",
+              "In a pan or wok, heat sesame oil over medium heat.",
+              "Add sliced carrots, bell peppers and green onions. Sauté for 2-3 minutes.",
+              "Add minced ginger and garlic, sauté for an additional minute.",
+              "Add the cooked noodles to the pan and toss to combine.",
+              "In a small bowl, mix together soy sauce, sesame oil, and a tablespoon of sesame seeds.",
+              "Add the sauce to the pan and toss until the noodles are well coated.",
+              "Serve warm, garnished with extra sesame seeds and green onions."
+              ],
+              "url": "img/sesamenoodles.png",
+              "href": "SesameNoodles.html"
+              },
+              {
+                "name": "Vegan Lentil Curry",
+                "description": "A flavorful and hearty curry made with lentils, vegetables and spices, perfect for a vegan meal.",
+                "ingredients": ["lentils", "coconut milk", "onion", "tomatoes", "cumin", "coriander", "turmeric", "ginger", "garlic", "spinach"],
+                "instructions": [
+                "Rinse and drain the lentils and set them aside.",
+                "In a large pot, sauté diced onion in a tablespoon of vegetable oil until softened.",
+                "Add diced tomatoes, cumin, coriander, turmeric, ginger and garlic and cook for 2-3 minutes.",
+                "Add the lentils to the pot and stir to combine.",
+                "Add enough water or vegetable broth to cover the lentils by 1 inch and bring to a simmer.",
+                "Reduce the heat to low and cook until the lentils are tender, about 25-30 minutes.",
+                "Stir in the coconut milk and bring the curry to a simmer again.",
+                "Stir in the spinach and cook until wilted.",
+                "Serve with rice or naan bread."
+                ],
+                "url": "img/veganlentilcurry.png",
+                "href": "VeganLentilCurry.html"
+                },
+                {
+                  "name": "Lemon Herb Chicken",
+                  "description": "Juicy and flavorful chicken seasoned with lemon and herbs, perfect for a quick and easy dinner.",
+                  "ingredients": ["chicken breasts", "lemon", "parsley", "thyme", "oregano", "garlic", "olive oil", "salt", "pepper"],
+                  "instructions": [
+                  "Preheat the oven to 375°F (190°C).",
+                  "Zest and juice the lemon and set aside.",
+                  "Finely chop the parsley, thyme, and oregano and set aside.",
+                  "Mince the garlic and set aside.",
+                  "In a small bowl, mix together the lemon zest, chopped herbs, minced garlic, olive oil, salt, and pepper.",
+                  "Place the chicken breasts in a baking dish and spread the lemon herb mixture over the chicken.",
+                  "Roast the chicken for 20-25 minutes or until cooked through.",
+                  "Remove from the oven and let rest for a few minutes before slicing and serving.",
+                  "Squeeze the lemon juice over the chicken before serving."
+                  ],
+                  "url": "img/lemonherbchicken.png",
+                  "href": "LemonHerbChicken.html"
+                  }
 ]
