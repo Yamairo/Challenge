@@ -1,4 +1,4 @@
-fetch("recipes.json")
+fetch("/recipes.json")
 .then(response => response.json())
 .then(recipes => {
   for(const recipe of recipes) {
