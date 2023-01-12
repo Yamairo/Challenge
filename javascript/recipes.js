@@ -4,10 +4,14 @@ fetch("recipes.json")
   for(const recipe of recipes) {
     const { name, ingredients, instructions, url, href } = recipe;
     if(href==window.location.pathname.split("/")[1]){
+      const img = document.getElementById("img")
+      img.src = url
       // Create a H1 for the name of the meal
       const gerecht = document.createElement("H1")
       const gerchtNaam = document.createTextNode(name)
       gerecht.appendChild(gerchtNaam)
+      // Get container div for better placement of children
+      const container = document.getElementById("container")
       // Get a div to put the name in
       const element = document.getElementById("div1")
       element.appendChild(gerecht)

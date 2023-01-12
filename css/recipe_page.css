@@ -1,0 +1,45 @@
+body {
+    background-color: rgba(0, 43, 38, 0.292);
+}
+
+::-webkit-scrollbar {
+    display: none;
+  }
+  
+
+H2 {
+    padding-left: 15%;
+}
+
+img {
+    position: absolute;
+    width : 40%;
+    height: auto;
+    z-index: -1;
+    border-radius: 10%;
+}
+
+ul {
+    list-style-type: none;
+}
+
+div[id="container"]{
+    position: relative;  
+}
+
+div[id="div1"]{
+    position: absolute;
+   top: 20vh;
+   left: 70vh;
+   text-align: center; 
+
+   width: 25%;
+   background-color: white;
+   border: 2px solid red;
+}
+
+div[id="div2"]{
+    position: absolute;
+    top: 55vh;
+    text-align: center; 
+}
