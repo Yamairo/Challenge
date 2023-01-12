@@ -9,7 +9,6 @@ Also some organisational information that concerns this repository will be added
 - [ ] logo on login page
 - [ ] join us page uitbreiden
 - [ ] hash password
-- [ ] database maken
 - [ ] database koppelen
 - [ ] push notification
 ## In progress
@@ -17,6 +16,7 @@ Also some organisational information that concerns this repository will be added
 - [ ] add all group members to repository
 - [ ] about us
 ## Done ✓
+- [x] database maken
 - [x] add recipes tab
 - [x] create repository
 - [x] create READ.me
