@@ -1,6 +1,6 @@
 fetch("recipes.json")
-.then(response => response.json())
-.then(recipes => {
+  .then(response => response.json())
+  .then(recipes => {
   for(const recipe of recipes) {
     const { name, ingredients, instructions, url, href } = recipe;
     if(href==window.location.pathname.split("/")[1]){
