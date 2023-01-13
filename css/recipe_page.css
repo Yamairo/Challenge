@@ -5,10 +5,25 @@ body {
 ::-webkit-scrollbar {
     display: none;
   }
-  
+
+a {
+    color: black;
+}
+
+#linkContainer {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+    justify-items: end;
+    align-items: start;
+}
 
 H2 {
-    padding-left: 15%;
+    padding-left: 10%;
+}
+
+H2[id="instructies"] {
+    padding-left: 7%;
 }
 
 img {
@@ -24,7 +39,8 @@ ul {
 }
 
 div[id="container"]{
-    position: relative;  
+    position: relative; 
+    display: flex;
 }
 
 div[id="div1"]{
@@ -39,7 +55,15 @@ div[id="div1"]{
 }
 
 div[id="div2"]{
+    
     position: absolute;
     top: 55vh;
     text-align: center; 
+}
+
+div[id="div3"]{
+    left: 55vh;
+    position: absolute;
+    top: 55vh;
+    text-align: left; 
 }

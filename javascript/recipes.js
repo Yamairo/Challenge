@@ -25,6 +25,16 @@ fetch("recipes.json")
         ul.appendChild(li);     // append li to ul.
     }
     cont.appendChild(ul);
+    // Get a div for the list of instructions
+    var cont = document.getElementById('div3');
+    // Make a <ul>
+    var ul = document.createElement('ul');
+    for (i = 0; i <= instructions.length - 1; i++) {
+      var li = document.createElement('li');
+      li.innerHTML = instructions[i];
+      ul.appendChild(li);
+    }
+    cont.appendChild(ul);
     }
   }
 });
