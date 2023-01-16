@@ -307,3 +307,7 @@ h1 {
         display: none;
       }
   }
+  .product-grid{
+    display: flex;
+    flex-direction: row;
+  }
