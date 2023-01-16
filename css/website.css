@@ -20,6 +20,7 @@ li {
 }
 
 .name {
+    font-family: fantasy;
     position: relative;
     left: 30%;
     transform: translate(-50%, 0%);
