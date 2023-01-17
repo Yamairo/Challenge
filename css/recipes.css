@@ -9,24 +9,35 @@
   scrollbar-width: none;  /* Firefox */
 }
 .recipe-card {
-    display: inline-block;
-    width: 33%;
-    text-align: center;
-  }
-  .recipe-card img {
-    width: auto;
-    height: 30vh;
-  }
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  align-items: center; /* align elements vertically */
+  justify-content: space-between; /* distribute elements evenly */
+}
 
-  @media (max-width: 600px) {
-    .recipe-card {
-      width: 100%;
-    }
+.recipe-cards-container {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr); /* 3 columns with equal width */
+  grid-gap: 20px; /* add gap between columns */
+}
+
+.recipe-card img {
+  width: auto;
+  height: 30vh;
+}
+
+.recipe-card img {
+  width: auto;
+  height: 200px;
+  display: block;
+  margin: 0 auto;
+  max-width: 300px;
+}
+
+/* for screens smaller than 768px wide */
+@media (min-width: 768px) {
+  .recipe-cards-container {
+    grid-template-columns: repeat(3, 1fr); /* 1 column */
   }
-  .recipe-card img {
-    width: auto;
-    height: 200px;
-    display: block;
-    margin: 0 auto;
-    max-width: 300px;
-  }
+}
