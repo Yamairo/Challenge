@@ -20,9 +20,11 @@ li {
 }
 
 .name {
+    font-family: fantasy;
     position: relative;
     left: 30%;
     transform: translate(-50%, 0%);
+    padding-top: 30%;
   }
 .navbar {
     display: flex;
@@ -304,4 +306,8 @@ h1 {
       #menu{
         display: none;
       }
+  }
+  .product-grid{
+    display: flex;
+    flex-direction: row;
   }
