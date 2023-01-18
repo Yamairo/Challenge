@@ -34,9 +34,48 @@
           </nav>
           <!-- Hier komt site specefieke informatie te staan -->
           <div>
-            
+            <video id="preview"></video>
+            <button id="snap">Snap Photo</button>
           </div>
-        <script src="javascript/activebutton.js"></script>
+          <script src="https://cdnjs.cloudflare.com/ajax/libs/quagga/0.12.1/quagga.min.js"></script>
+          <script >
+        // access the camera
+        navigator.mediaDevices.getUserMedia({ video: true })
+        .then(function(stream) {
+            var video = document.getElementById('preview');
+            video.srcObject = stream;
+            video.play();
+        });
+        
+        // when the snap button is clicked
+        document.getElementById('snap').addEventListener('click', function() {
+        var canvas = document.createElement('canvas');
+        var video = document.getElementById('preview');
+        canvas.width = video.videoWidth;
+        canvas.height = video.videoHeight;
+        canvas.getContext('2d').drawImage(video, 0, 0);
+        var img = canvas.toDataURL('image/png');
+        
+        // decode the barcode
+        Quagga.decodeSingle({
+            decoder: {
+                readers: ["code_128_reader"]
+            },
+            locate: true,
+            src: img
+        }, function(result) {
+            if (result.codeResult) {
+                console.log(result.codeResult.code);
+            } else {
+                console.log("No barcode found.");
+            }
+        });
+        });
+
+          </script>
+        <script src="javascript/activebutton.js">
+
+        </script>
     </nav>
 </body>
 </html>
