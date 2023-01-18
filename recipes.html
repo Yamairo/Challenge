@@ -38,30 +38,35 @@
             <h1>Recipes</h1>
     <div>
         <script>
-            // Obtain the JSON data from the "recipes.json" file
             fetch("recipes.json")
-              .then(response => response.json())
-              .then(recipes => {
-                // Iterate over the array of recipes
-                for (const recipe of recipes) {
-                  // Extract the name, description, URL, and href of the recipe
-                  const { name, description, url, href } = recipe;
-    
-                  // Create a new div element for the recipe card
-                  const div = document.createElement("div");
-                  div.classList.add("recipe-card");
-                  console.log("TESSSSSST")
-                  // Add the name, description, and image to the recipe card
-                  div.innerHTML = `
-                    <h2>${name}</h2>
-                    <p>${description}</p>
-                    <a href="${href}"><img src="${url}" alt="${name}"></a>
-                  `;
-    
-                  // Append the recipe card to the document
-                  document.body.appendChild(div);
-                }
-              });
+                .then(response => response.json())
+                .then(recipes => {
+                    // Create a new div element with a class of "recipe-cards-container"
+                    const container = document.createElement("div");
+                    container.classList.add("recipe-cards-container");
+
+                    // Iterate over the array of recipes
+                    for (const recipe of recipes) {
+                    // Extract the name, description, URL, and href of the recipe
+                    const { name, description, url, href } = recipe;
+
+                    // Create a new div element for the recipe card
+                    const div = document.createElement("div");
+                    div.classList.add("recipe-card");
+
+                    // Add the name, description, and image to the recipe card
+                    div.innerHTML = `
+                        <h2>${name}</h2>
+                        <p>${description}</p>
+                        <a href="${href}"><img src="${url}" alt="${name}"></a>
+                    `;
+
+                    // Append the recipe card to the container element
+                    container.appendChild(div);
+                    }
+                    // Append the container element to the body of the document
+                    document.body.appendChild(container);
+                });
           </script>
     </div>
         <script src="javascript/activebutton.js"></script>

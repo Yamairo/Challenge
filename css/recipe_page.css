@@ -52,6 +52,7 @@ div[id="div1"]{
    width: 25%;
    background-color: white;
    border: 2px solid red;
+   border-radius: 0%;
 }
 
 div[id="div2"]{
