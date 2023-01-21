@@ -3,28 +3,32 @@
   display: none;
 }
 
+:root {
+    --pad : 40%;
+    --multiplier : 1.001;
+    --pad2 : 1%;
+}
+
+h2[id="top"] {
+    margin: auto;
+    background-color: rgb(35, 65, 72);
+}
+
+.textbox {
+    width: 100%;
+}
+
+p[id="bottom"] {
+    margin: auto;
+    background-color: rgba(0, 0, 0, 0.371);
+}
+
 /* Hide scrollbar for IE, Edge and Firefox */
 .example {
   -ms-overflow-style: none;  /* IE and Edge */
   scrollbar-width: none;  /* Firefox */
 }
-
-.textbox {
-  width: 100%;
-  background-color: rgba(45, 79, 65, 0.181);
-}
-
-
-h2[id="top"] {
-  margin: auto;
-  background-color: rgb(35, 65, 72);
-}
-p[id="bottom"] {
-  margin: auto;
-  background-color: rgba(0, 0, 0, 0.371);
-}
-
-.recipe-card {
+.product-card {
   display: flex;
   background-color: rgba(128, 128, 128, 0.237);
   flex-direction: column;
@@ -33,18 +37,18 @@ p[id="bottom"] {
   justify-content: space-between; /* distribute elements evenly */
 }
 
-.recipe-cards-container {
+.product-cards-container {
   display: grid;
   grid-template-columns: repeat(1, 1fr); /* 3 columns with equal width */
   grid-gap: 20px; /* add gap between columns */
 }
 
-.recipe-card img {
+.product-card img {
   width: auto;
   height: 30vh;
 }
 
-.recipe-card img {
+.product-card img {
   width: auto;
   height: 200px;
   display: block;
@@ -54,7 +58,7 @@ p[id="bottom"] {
 
 /* for screens smaller than 768px wide */
 @media (min-width: 768px) {
-  .recipe-cards-container {
+  .product-cards-container {
     grid-template-columns: repeat(3, 1fr); /* 1 column */
   }
 }

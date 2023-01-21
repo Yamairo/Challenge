@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/app_hs.css">
+    <link rel="stylesheet" href="css/fridge_contents.css">
     <title>Fridge contents</title>
 </head>
 <body>
@@ -41,28 +42,28 @@
             fetch("json/products.json")
                 .then(response => response.json())
                 .then(products => {
-                    // Create a new div element with a class of "recipe-cards-container"
+                    // Create a new div element with a class of "product-cards-container"
                     const container = document.createElement("div");
-                    container.classList.add("recipe-cards-container");
+                    container.classList.add("product-cards-container");
 
-                    // Iterate over the array of recipes
+                    // Iterate over the array of products
                     for (const product of products) {
-                    // Extract the name, description, URL, and href of the recipe
+                    // Extract the name, description, URL, and href of the product
                     const { name, experation_date, url, href , alert_threshold} = product;
 
-                    // Create a new div element for the recipe card
+                    // Create a new div element for the product card
                     const div = document.createElement("div");
-                    div.classList.add("recipe-card");
+                    div.classList.add("product-card");
 
-                    // Add the name, description, and image to the recipe card
+                    // Add the name, description, and image to the product card
                     div.innerHTML = `
-                        <h2>${name}</h2>
-                        <a href="${href}"><img src="${url}" alt="${name}"></a>
-                        <p>${experation_date} ${alert_threshold} days left</p>
+                        <div class="textbox"><h2 id="top">${name}</h2><div>
+                        <div class="textbox"><a href="${href}"><img src="${url}" alt="${name}"></a><div>
+                        <div class="textbox"><p id="bottom">${experation_date} ${alert_threshold} days left</p><div>
                         
                     `;
 
-                    // Append the recipe card to the container element
+                    // Append the product card to the container element
                     container.appendChild(div);
                     }
                     // Append the container element to the body of the document

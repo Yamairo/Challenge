@@ -56,9 +56,12 @@
 
                     // Add the name, description, and image to the recipe card
                     div.innerHTML = `
-                        <h2>${name}</h2>
-                        <p>${description}</p>
-                        <a href="${href}"><img src="${url}" alt="${name}"></a>
+                        <div class="textbox"><h2 id="top">${name}</h2><div>
+                        <div class="textbox"><a href="${href}"><img src="${url}" alt="${name}"></a><div>
+                        <div class="textbox"><p id="bottom">${description}</p><div>
+                        
+                        
+                        
                     `;
 
                     // Append the recipe card to the container element
