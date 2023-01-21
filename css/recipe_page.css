@@ -28,8 +28,10 @@ H2[id="instructies"] {
 
 img {
     position: absolute;
-    width : 40%;
+    width : auto;
     height: auto;
+    max-height: 50vh;
+    overflow: hidden;
     z-index: -1;
     border-radius: 10%;
 }

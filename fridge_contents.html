@@ -78,31 +78,29 @@
             var video = document.getElementById('preview');
             video.srcObject = stream;
             video.play();
-        });
-        
-        // when the snap button is clicked
-        document.getElementById('snap').addEventListener('click', function() {
-        var canvas = document.createElement('canvas');
-        var video = document.getElementById('preview');
-        canvas.width = video.videoWidth;
-        canvas.height = video.videoHeight;
-        canvas.getContext('2d').drawImage(video, 0, 0);
-        var img = canvas.toDataURL('image/png');
-        
-        // decode the barcode
-        Quagga.decodeSingle({
-            decoder: {
-                readers: ["code_128_reader","ean_reader","ean_8_reader","code_39_reader","code_39_vin_reader","codabar_reader","upc_reader","upc_e_reader","i2of5_reader"]
-            },
-            locate: true,
-            src: img
-        }, function(result) {
-            if (result.codeResult) {
-                console.log(result.codeResult.code);
-            } else {
-                console.log("No barcode found.");
-            }
-        });
+
+            // decode the barcode every second
+            setInterval(function() {
+                var canvas = document.createElement('canvas');
+                canvas.width = video.videoWidth;
+                canvas.height = video.videoHeight;
+                canvas.getContext('2d').drawImage(video, 0, 0);
+                var img = canvas.toDataURL('image/png');
+
+                Quagga.decodeSingle({
+                    decoder: {
+                        readers: ["code_128_reader","ean_reader","ean_8_reader","code_39_reader","code_39_vin_reader","codabar_reader","upc_reader","upc_e_reader","i2of5_reader"]
+                    },
+                    locate: true,
+                    src: img
+                }, function(result) {
+                    if (result.codeResult) {
+                        console.log(result.codeResult.code);
+                    } else {
+                        console.log("No barcode found.");
+                    }
+                });
+            }, 1000); // interval in milliseconds
         });
 
           </script>
