@@ -1,0 +1,5 @@
+{
+  "dependencies": {
+    "openfoodfacts-nodejs": "^0.1.0"
+  }
+}

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<input type="text" id="barcodeInput">
+<button onclick="getProduct()">Submit</button>
+<p id="productName"></p>
+
+<script src="https://unpkg.com/openfoodfacts-nodejs@latest/dist/openfoodfacts-nodejs.min.js"></script>
+<script>
+const off = require('openfoodfacts-nodejs');
+const client = new off();
+
+function getProduct() {
+    var barcode = document.getElementById("barcodeInput").value;
+    client.getProduct(barcode).then(product => {
+        document.getElementById("productName").innerHTML = product.product.product_name;
+    });
+}
+</script>
+
+</body>
+</html>

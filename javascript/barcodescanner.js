@@ -1,18 +1,20 @@
-// Deze code werkt nog niet
+const off = require('openfoodfacts-nodejs');
+const client = new off();
 
-var data = "0=%3C&1=s&2=t&3=r&4=i&5=n&6=g&7=%3E";
+const barcodes = ['5000112546415', '5449000011527'];
 
-var xhr = new XMLHttpRequest();
-xhr.withCredentials = true;
-
-xhr.addEventListener("readystatechange", function() {
-     if(this.readyState === 4) {
-          console.log(this.responseText);
-     }
+// Use map() method to retrieve product information for each barcode
+const products = barcodes.map(barcode => {
+    return client.getProduct(barcode);
 });
 
-xhr.open("POST", "https://api.cloudmersive.com/barcode/lookup/ean");
-xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
-xhr.setRequestHeader("Apikey", "YOUR-API-KEY-HERE");
-
-xhr.send(data);
+// Use Promise.all() method to wait for all promises to resolve
+Promise.all(products)
+    .then(allProducts => {
+        allProducts.forEach(product => {
+            console.log(product.product.product_name);
+        });
+    })
+    .catch(error => {
+        console.error(error);
+    });
