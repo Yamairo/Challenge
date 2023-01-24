@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script defer src="https://pyscript.net/alpha/pyscript.js"></script>
+</head>
+<body>
+    <py-env>
+    - openfoodfacts
+    </py-env>
+    <py-script>
+    import openfoodfacts
+    product_data = openfoodfacts.products.get_product("5449000011527")["product"]
+    product_name = product_data["product_name"]
+    product_image = product_data["selected_images"]["front"]["display"]["fr"]
+    </py-script>
+</body>
+</html>
