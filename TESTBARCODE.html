@@ -19,6 +19,7 @@
                     type: "GET",
                     url: "product_data/"+productCode,
                     success: function(response) {
+                        console.log(url)
                         console.log(response)
                         $("#product_data").html("<p>Product Name: " + response.product_name + "</p>" +
                                                 "<p>Product Image: <img src='" + response.product_image + "'></p>")
