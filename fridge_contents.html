@@ -35,75 +35,75 @@
           </nav>
           <!-- Hier komt site specefieke informatie te staan -->
           <div>
-            <video id="preview"></video>
-            <button id="snap">Snap Photo</button>
+            <input type="text" id="text" placeholder="Typ hier de nummers bij de barcode..">
+            <button>click</button>
           </div>
+          <div class="product-cards-container"></div>
           <script>
-            fetch("json/products.json")
-                .then(response => response.json())
-                .then(products => {
-                    // Create a new div element with a class of "product-cards-container"
-                    const container = document.createElement("div");
-                    container.classList.add("product-cards-container");
+            const button = document.querySelector("button");
+            button.addEventListener("click", searchProduct);
+            let products = JSON.parse(localStorage.getItem('products')) || []
 
-                    // Iterate over the array of products
-                    for (const product of products) {
-                    // Extract the name, description, URL, and href of the product
-                    const { name, experation_date, url, href , alert_threshold} = product;
+            function searchProduct(event) {
+                event.preventDefault();
+                const input = document.getElementById("text")
+                const barcode = input.value;
+                fetch(`https://world.openfoodfacts.org/api/v0/product/${barcode}/product.json`)
+                    .then(response => response.json())
+                    .then(data => {
+                        // Check if a product with the same barcode already exists in the array
+                        const existingProduct = products.find(product => product.barcode === barcode);
+                        if (!existingProduct) {
+                            const product = {
+                                name: data.product.product_name,
+                                image: data.product.image_front_thumb_url,
+                                expiration_date: data.product.expiration_date,
+                                href: data.product.url,
+                                barcode: barcode
+                            }
+                            products.push(product)
+                            localStorage.setItem('products', JSON.stringify(products));
+                            displayProducts(products)
+                        } else {
+                            console.log('Product already exists in the array.');
+                        }
+                    });
+            }
 
+            window.onload = function() {
+                let products = JSON.parse(localStorage.getItem('products')) || []
+                displayProducts(products)
+            }
+
+            function displayProducts(products) {
+                products.forEach((product, index) => {
                     // Create a new div element for the product card
                     const div = document.createElement("div");
                     div.classList.add("product-card");
 
                     // Add the name, description, and image to the product card
                     div.innerHTML = `
-                        <div class="textbox"><h2 id="top">${name}</h2><div>
-                        <div class="textbox"><a href="${href}"><img src="${url}" alt="${name}"></a><div>
-                        <div class="textbox"><p id="bottom">${experation_date} ${alert_threshold} days left</p><div>
-                        
+                        <div class="textbox"><h2 id="top">${product.name}</h2><button class="delete-button">Delete</button><div>
+                        <div class="textbox"><a href="${product.href}"><img src="${product.image}" alt="${product.name}"></a><div>
+                        <div class="textbox"><p id="bottom">${product.expiration_date}</p><div>
                     `;
 
                     // Append the product card to the container element
-                    container.appendChild(div);
-                    }
-                    // Append the container element to the body of the document
-                    document.body.appendChild(container);
+                    document.querySelector('.product-cards-container').appendChild(div);
+
+                    // Add an event listener to the delete button
+                    const deleteButton = div.querySelector('.delete-button');
+                    deleteButton.addEventListener('click', () => {
+                        // Remove the product from the products array
+                        products.splice(index, 1);
+                        localStorage.setItem('products', JSON.stringify(products));
+                        // Remove the product card from the page
+                        div.remove();
+                    });
                 });
-          </script>
-          <script src="https://cdnjs.cloudflare.com/ajax/libs/quagga/0.12.1/quagga.min.js"></script>
-          <script >
-        // access the camera
-        navigator.mediaDevices.getUserMedia({ video: true })
-        .then(function(stream) {
-            var video = document.getElementById('preview');
-            video.srcObject = stream;
-            video.play();
+            }
 
-            // decode the barcode every second
-            setInterval(function() {
-                var canvas = document.createElement('canvas');
-                canvas.width = video.videoWidth;
-                canvas.height = video.videoHeight;
-                canvas.getContext('2d').drawImage(video, 0, 0);
-                var img = canvas.toDataURL('image/png');
-
-                Quagga.decodeSingle({
-                    decoder: {
-                        readers: ["code_128_reader","ean_reader","ean_8_reader","code_39_reader","code_39_vin_reader","codabar_reader","upc_reader","upc_e_reader","i2of5_reader"]
-                    },
-                    locate: true,
-                    src: img
-                }, function(result) {
-                    if (result.codeResult) {
-                        console.log(result.codeResult.code);
-                    } else {
-                        console.log("No barcode found.");
-                    }
-                });
-            }, 1000); // interval in milliseconds
-        });
-
-          </script>
+        </script>
         <script src="javascript/activebutton.js">
 
         </script>
