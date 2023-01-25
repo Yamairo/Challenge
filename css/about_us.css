@@ -27,7 +27,7 @@ h2 {
 }
 
 a {
-    
+    color: rgb(70, 232, 56);
 }
 
 p {
@@ -70,6 +70,8 @@ p {
   }
   
   .title {
+    font-weight: bold;
+    font-size: larger;
     text-decoration: underline;
     color: rgb(189, 187, 187);
   }
