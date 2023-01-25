@@ -3,13 +3,44 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/website.css">
     <link href="css/login.css" rel="stylesheet">
-    <title>Document</title>
+    <title>Login</title>
 </head>
 <body>
+    <nav>
+        <nav id='menu'>
+            <input type='checkbox' id='responsive-menu' onclick='updatemenu()'>
+            <ul>
+                <li>
+                    <img class="logo" src="img/logo.png" alt="">
+                </li>
+                <li class="name" >
+                    <a href="index.html" class="name">FoodAlarm</a>
+                </li>
+            <div class="centermenu">
+                <li class="nav-link">
+                    <a class="nav-link"  href='product.html'>PRODUCT</a>
+                </li>
+                <li class="nav-link">
+                    <a class="nav-link" href='about_us.html'>ABOUT US</a>
+                </li>
+                <li class="nav-link">
+                    <a class="nav-link" href='contact.html'>CONTACT</a>
+                </li>
+            </div>
+            <div style="padding-left: 93%;">
+                <li class="nav-link">
+                    <a class="nav-link" href='login.html'>LOGIN</a>
+                </li>
+            </div>
+            </ul>
+          </nav>
+        </nav>
+    <h1>Register</h1>
     <div>
         <form name="login" action="register.php" method="GET">
-            <div class="centered input">
+            <div class="centered-input">
             <label for="fname">First name</label><br>
             <input type="text" id="fname" name="fname" required><br>
             <label for="lname">Last name</label><br>
@@ -23,7 +54,15 @@
             <input type="submit" value="Submit"><br>
             </div>
         </form>
-        
+    </div>
+    <div class="dropbtn, dropdown">
+        <button class="dropbtn">≡</button>
+        <div class="dropdown-content">
+            <a class="nav-link"  href='product.html'>PRODUCT</a>
+            <a class="nav-link" href='about_us.html'>ABOUT US</a>
+            <a class="nav-link" href='contact.html'>CONTACT</a>
+            <a class="nav-link" href='login.html'>LOGIN</a>
+        </div>
     </div>
 </body>
 </html>

@@ -149,8 +149,9 @@ a:hover {
 
 .centered {
     position: absolute;
+    margin: auto;
     top: 50%;
-    left: 27%;
+    left: 48%;
     transform: translate(-50%, -50%);
 }
 

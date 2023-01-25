@@ -18,18 +18,6 @@ input {
     box-shadow:0 0 15px 4px rgba(0,0,0,0.6);
 }
 
-/* .input {
-    padding:10px;
-    border-radius:10px;
-}
-
-.border-customized-input {
-    border: 2px solid #eee;
-}
-
-.border-removed-input {
-    border: 0;
-} */
 
 .centered {
     position: fixed; 
@@ -189,11 +177,11 @@ a:hover {
     text-decoration: underline;
 }
 
-.centered {
+.centered-input {
     position: absolute;
-    top: 50%;
-    left: 27%;
-    transform: translate(-50%, -50%);
+    top: 25%;
+    left: 44%;
+    /* transform: translate(-50%, -50%); */
 }
 
 .bottom-right {
