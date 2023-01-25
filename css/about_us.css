@@ -22,7 +22,16 @@ body {
     box-sizing: inherit;
   }
 
+h2 {
+    color: rgb(180, 219, 253);
+}
+
+a {
+    
+}
+
 p {
+    color: aliceblue;
     text-align: left;
 }
 
@@ -61,7 +70,8 @@ p {
   }
   
   .title {
-    color: grey;
+    text-decoration: underline;
+    color: rgb(189, 187, 187);
   }
   
   .button {
