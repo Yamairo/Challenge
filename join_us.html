@@ -8,21 +8,22 @@
 </head>
 <body>
     <div>
-        <form name="login" action="register.php" onsubmit="saveData();return isNietLeeg()">
+        <form name="login" action="register.php" method="GET">
             <div class="centered input">
             <label for="fname">First name</label><br>
             <input type="text" id="fname" name="fname" required><br>
-            <label for="fname">Last name</label><br>
-            <input type="text" id="fname" name="fname" required><br>
+            <label for="lname">Last name</label><br>
+            <input type="text" id="lname" name="lname" required><br>
             <label for="email">Email-adres</label><br>
             <input type="text" id="email" name="email" required><br>
             <label for="pword">Password</label><br>
             <input type="password" id="pword" name="pword" required><br>
-            <label for="pword">Repeat password</label><br>
+            <label for="pword2">Repeat password</label><br>
             <input type="password" id="pword2" name="pword2" required><br>
             <input type="submit" value="Submit"><br>
             </div>
         </form>
+        
     </div>
 </body>
 </html>
