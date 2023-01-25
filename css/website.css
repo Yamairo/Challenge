@@ -19,13 +19,6 @@ li {
     text-align: -webkit-match-parent;
 }
 
-.name {
-    font-family: fantasy;
-    position: relative;
-    left: 30%;
-    transform: translate(-50%, 0%);
-    padding-top: 30%;
-  }
 .navbar {
     display: flex;
     align-items: center;
@@ -40,10 +33,10 @@ li {
 
 .save-middle{
     margin: auto;
-    padding-top: 3%;
+    padding-top: 10%;
     text-align: center;
     color: white;
-    font-size: 200%;
+    font-size: 300%;
     font-family: 'Lucida Sans';
     font-weight: 800;
 }
@@ -150,10 +143,6 @@ li {
     height: 9vh;
 }
 
-body {
-    background-color: E3E3E3;
-}
-
 a:hover {
     text-decoration: underline;
 }
@@ -216,7 +205,7 @@ h1 {
 	display: inline;
 	position: relative;
 }
-#menu a {
+#menu a[class="nav-link"] {
 	display: block;
 	line-height: var(--height);
 	padding: 0 14px;
@@ -226,7 +215,24 @@ h1 {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
-#menu li a:hover {
+.name {
+    position: relative;
+    left: 29%;
+    transform: translate(-0%, 0%);
+    padding-bottom: 10%;
+    font-size: x-large ;
+}
+
+#menu a[class="name"] {
+	display: block;
+    font-family: fantasy;
+	line-height: var(--height);
+	padding: 0 14px;
+	text-decoration: none;
+	color: #FFFFFF;
+}
+
+#menu li a[class="nav-link"]:hover {
 	color: #0099CC;
 }
 
@@ -307,7 +313,7 @@ h1 {
         display: none;
       }
   }
-  .product-grid{
+.product-grid{
     display: flex;
     flex-direction: row;
-  }
+}

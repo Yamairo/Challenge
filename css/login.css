@@ -39,3 +39,323 @@ input {
     transform: translate(-50%, -50%);
     background-color: var(--colorbox);
   }
+
+  body{
+    background-color: black;
+    background-image: url('../img/background.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: rgb(0, 0, 0);
+}
+
+li {
+    display: list-item;
+    text-align: -webkit-match-parent;
+}
+
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1%;
+    background-color: rgb(0, 0, 0, 0.9);
+    color: #fff;
+    margin-top: -10px;
+    margin-left:-10px;
+    margin-right:-10px;
+}
+
+.save-middle{
+    margin: auto;
+    padding-top: 10%;
+    text-align: center;
+    color: white;
+    font-size: 300%;
+    font-family: 'Lucida Sans';
+    font-weight: 800;
+}
+.icon{
+    height: 150px;
+}
+.button-middle1{
+    position: relative;
+    height: 10%;
+    color: white;
+    width: 100%;
+    height: 6vh;
+    background-color: transparent;
+    cursor: pointer;
+    border-radius: 4px;
+    font-size: 12px;
+    margin-right: 2px;
+}
+
+.button-middle2{
+    position: relative;
+    color: white;
+    width: 200%;
+    height: 6vh;
+    background-color: transparent;
+    cursor: pointer;
+    border-radius: 4px;
+    font-size: 12px;
+}
+
+.buttons {
+    position: absolute;
+    left: 47%;
+    transform: translate(-50%, -50%);
+    width: fit-content; 
+    display: flex;
+}
+
+.button-nav{
+    height: 50px;
+    color: white;
+    width: 100px;
+    background-color: transparent;
+    border-color: white;
+    cursor: pointer;
+    border-radius: 4px;
+    font-size: 18px;
+    margin-right: 20px;
+    width: 150px;
+    border-bottom: none;
+    border-top: none;
+    border-left: none;
+    border-radius: none;
+}
+
+.login-button{
+    height: 50px;
+    color: white;
+    width: 100px;
+    background-color: transparent;
+    border-color: white;
+    cursor: pointer;
+    border-radius: 4px;
+    font-size: 18px;
+    margin-right: 20px;
+    margin-top: 45px;
+    width: 150px;
+    border-bottom: none;
+    border-top: none;
+    border-left: none;
+    border-radius: none;
+    border-right: none;
+    font-weight: 800;
+}
+.login{
+    width: min-content;
+}
+
+:root {
+    --height : 10vh;
+    --color : rgb(0, 94, 11);
+    --filter : brightness(60%);
+    --padding1 : 1vh;
+    --padding2 : 4vh;
+}
+
+.nav-link [id="page"] {
+    background-color: var(--color);
+}
+
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: rgb(0, 0, 0, 0.9);
+    color: #fff;
+    margin-right:-10px;
+    border: #ffffff;
+    border-width: 5px;
+}
+
+.icon{
+    padding: 10%;
+    height: 9vh;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+.centered {
+    position: absolute;
+    top: 50%;
+    left: 27%;
+    transform: translate(-50%, -50%);
+}
+
+.bottom-right {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.logo {
+    filter: grayscale(50%) invert(80%) brightness(95%) hue-rotate(180deg);
+    padding-right: 120px;
+    height: var(--height);
+    width: auto;
+}
+
+
+h1 {
+    color: #5e2f2f;
+    text-align: center;
+}
+
+.center {
+    margin: auto;
+    padding: 50%;
+}
+
+.centermenu {
+    margin: auto;
+    padding-left: 60%;
+}
+
+#menu {
+	background: #000000;
+	color: #FFF;
+	height: var(--height);
+	border-radius: 10px;
+    overflow: hidden;
+}
+#menu ul, #menu li {
+	margin: 0 auto;
+	padding: 0;
+	list-style: none
+}
+#menu ul {
+	width: 100%;
+}
+
+#menu li {
+	float: left;
+	display: inline;
+	position: relative;
+}
+#menu a[class="nav-link"] {
+	display: block;
+	line-height: var(--height);
+	padding: 0 14px;
+	text-decoration: none;
+	color: #FFFFFF;
+	font-size: 2vh;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.name {
+    position: relative;
+    left: 29%;
+    transform: translate(-0%, 0%);
+    padding-bottom: 10%;
+    font-size: x-large ;
+}
+
+#menu a[class="name"] {
+	display: block;
+    font-family: fantasy;
+	line-height: var(--height);
+	padding: 0 14px;
+	text-decoration: none;
+	color: #FFFFFF;
+}
+
+#menu li a[class="nav-link"]:hover {
+	color: #0099CC;
+}
+
+#menu input {
+	display: none;
+	margin: 0;
+	padding: 0;
+	height: 80px;
+	width: 100%;
+	opacity: 0;
+	cursor: pointer
+}
+
+.dropdown {
+    display: none;
+}
+
+@media (max-width: 480px) {
+    body {
+      background-color: red;
+    }
+    .dropbtn {
+        background-color: rgb(0, 0, 0, 1.0);
+        text-align: left;
+        margin: auto;
+        overflow: hidden;
+        width: 100%;
+        color: white;
+        font-size: 16px;
+        border: none;
+        cursor: pointer;
+      }
+      
+      /* The container <div> - needed to position the dropdown content */
+      .dropdown {
+        width: 100%;
+        position: relative;
+        display: inline-block;
+      }
+      
+      /* Dropdown Content (Hidden by Default) */
+      .dropdown-content {
+        display: none;
+        position: absolute;
+        background-color: #ffffff;
+        min-width: 100%;
+        box-shadow: 0px 8px 16px 0px rgba(255, 255, 255, 0.2);
+        z-index: 1;
+      }
+      
+      /* Links inside the dropdown */
+      .dropdown-content a {
+        color: black;
+        padding: 12px 16px;
+        text-decoration: none;
+        display: block;
+      }
+      
+      /* Change color of dropdown links on hover */
+      .dropdown-content a:hover {background-color: #f1f1f1}
+      
+      /* Show the dropdown menu on hover */
+      .dropdown:hover .dropdown-content {
+        display: block;
+      }
+      
+      /* Change the background color of the dropdown button when the dropdown content is shown */
+      .dropdown:hover .dropbtn {
+        background-color: #0002002b;
+      }
+
+      .name {
+        display: flex;
+        align-items: center;
+        margin: auto;
+      }
+      #menu{
+        display: none;
+      }
+  }
+.product-grid{
+    display: flex;
+    flex-direction: row;
+}
