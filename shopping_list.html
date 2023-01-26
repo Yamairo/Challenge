@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/app_hs.css">
+    <link rel="stylesheet" href="css/fridge_contents.css">
     <title>Shopping list</title>
 </head>
 <body>
@@ -36,6 +37,44 @@
           <div>
             <h1>Shopping list</h1>
           </div>
+        <div class="product-cards-container"></div>
+        <script>
+            let barcodeCount = JSON.parse(localStorage.getItem('barcodeCount')) || {}
+
+            // Convert barcodeCount object to array
+            let barcodeArray = []
+            for (const barcode in barcodeCount) {
+                barcodeArray.push({ barcode: barcode, count: barcodeCount[barcode] })
+            }
+
+            // Sort the array by count
+            barcodeArray.sort((a, b) => b.count - a.count)
+
+            // Get the top 20 barcodes
+            let topBarcodes = barcodeArray.slice(0, 20)
+            console.log(topBarcodes)
+            // Fetch data for each barcode
+            topBarcodes.forEach(barcode => {
+                console.log(barcode.barcode)
+                fetch(`https://world.openfoodfacts.org/api/v0/product/${barcode.barcode}.json`)
+                    .then(response => response.json())
+                    .then(data => {
+                        // Create a product card for each barcode
+                        let productCard = document.createElement('div')
+                        productCard.classList.add('product-card')
+                        productCard.innerHTML = `
+                            <div class="textbox"><h2 class="textbox" id="top">${data.product.product_name}</h2><div>
+                            <div class="textbox"><img class="textbox" src="${data.product.image_url}" alt="${data.product.product_name}"><div>
+                            <div class="textbox"><p class="textbox">Barcode: ${barcode.barcode}</p><div>
+                            <div class="textbox"><p class="textbox">Searched: ${barcode.count} times</p><div>
+                            <div class="textbox"><div>
+                        `
+                        // Append the product card to the product-cards container
+                        document.querySelector('.product-cards-container').appendChild(productCard)
+                    })
+                    .catch(error => console.log(error))
+            })
+        </script>
         <script src="javascript/activebutton.js"></script>
     </nav>
 </body>

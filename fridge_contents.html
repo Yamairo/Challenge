@@ -36,6 +36,8 @@
           <!-- Hier komt site specefieke informatie te staan -->
           <div>
             <input type="text" id="text" placeholder="Typ hier de nummers bij de barcode..">
+            <p>Vul de houdbaarheidsdatum in</p>
+            <input type="date" id="date" >
             <button>click</button>
           </div>
           <div class="product-cards-container"></div>
@@ -43,65 +45,91 @@
             const button = document.querySelector("button");
             button.addEventListener("click", searchProduct);
             let products = JSON.parse(localStorage.getItem('products')) || []
+            let barcodeCount = JSON.parse(localStorage.getItem('barcodeCount')) || {}
+
+            function removeExpiredProducts() {
+                const currentDate = new Date();
+
+                products.forEach((product, index) => {
+                    const expirationDate = new Date(product.expiration_date);
+                    console.log(expirationDate, currentDate)
+                    if (expirationDate < currentDate) {
+                        products.splice(index, 1);
+                    }
+                });
+
+                localStorage.setItem("products", JSON.stringify(products));
+                displayProducts(products);
+            }
 
             function searchProduct(event) {
                 event.preventDefault();
                 const input = document.getElementById("text")
+                const experation_date = document.getElementById("date");
                 const barcode = input.value;
                 fetch(`https://world.openfoodfacts.org/api/v0/product/${barcode}/product.json`)
                     .then(response => response.json())
                     .then(data => {
                         // Check if a product with the same barcode already exists in the array
                         const existingProduct = products.find(product => product.barcode === barcode);
-                        if (!existingProduct) {
+                        console.log(products)
                             const product = {
                                 name: data.product.product_name,
                                 image: data.product.image_front_thumb_url,
-                                expiration_date: data.product.expiration_date,
+                                expiration_date: new Date(experation_date.value).toLocaleDateString("nl-NL", {day: "numeric", month: "long", year: "numeric"}),
                                 href: data.product.url,
                                 barcode: barcode
                             }
                             products.push(product)
                             localStorage.setItem('products', JSON.stringify(products));
+                            console.log(products)
+                            // add the barcode and its count to the barcodeCount object
+                            if (barcodeCount[barcode]) {
+                                barcodeCount[barcode]++;
+                            } else {
+                                barcodeCount[barcode] = 1;
+                            }
+                            localStorage.setItem('barcodeCount', JSON.stringify(barcodeCount));
+                            console.log(barcodeCount)
                             displayProducts(products)
-                        } else {
-                            console.log('Product already exists in the array.');
-                        }
+                            console.log(products)
                     });
             }
 
-            window.onload = function() {
-                let products = JSON.parse(localStorage.getItem('products')) || []
+            if (!document.getElementById(".product-cards-container")) {
                 displayProducts(products)
+                removeExpiredProducts(products)
             }
 
             function displayProducts(products) {
-                products.forEach((product, index) => {
-                    // Create a new div element for the product card
-                    const div = document.createElement("div");
-                    div.classList.add("product-card");
+        // Clear the content of the .product-cards-container element
+        document.querySelector(".product-cards-container").innerHTML = "";
 
-                    // Add the name, description, and image to the product card
-                    div.innerHTML = `
-                        <div class="textbox"><h2 id="top">${product.name}</h2><button class="delete-button">Delete</button><div>
-                        <div class="textbox"><a href="${product.href}"><img src="${product.image}" alt="${product.name}"></a><div>
-                        <div class="textbox"><p id="bottom">${product.expiration_date}</p><div>
-                    `;
+        products.forEach((product, index) => {
+            // Create a new div element for the product card
+            const div = document.createElement("div");
+            div.classList.add("product-card");
 
-                    // Append the product card to the container element
-                    document.querySelector('.product-cards-container').appendChild(div);
+            // Add the name, description, and image to the product card
+            div.innerHTML = `
+                <div class="textbox"><h2 id="top">${product.name}</h2><button class="delete-button">Delete</button><div>
+                <div class="textbox"><a href="${product.href}"><img src="${product.image}" alt="${product.name}"></a></div>
+                <div class="textbox"><p>${product.expiration_date}</p></div>
+            `;
 
-                    // Add an event listener to the delete button
-                    const deleteButton = div.querySelector('.delete-button');
-                    deleteButton.addEventListener('click', () => {
-                        // Remove the product from the products array
-                        products.splice(index, 1);
-                        localStorage.setItem('products', JSON.stringify(products));
-                        // Remove the product card from the page
-                        div.remove();
-                    });
-                });
-            }
+            // Append the new product card to the .product-cards-container element
+            document.querySelector(".product-cards-container").appendChild(div);
+
+            // Add event listener to delete button
+            div.querySelector('.delete-button').addEventListener('click', function () {
+                products.splice(index, 1);
+                localStorage.setItem('products', JSON.stringify(products));
+                displayProducts(products);
+            });
+        });
+
+    }
+
 
         </script>
         <script src="javascript/activebutton.js">
