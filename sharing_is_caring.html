@@ -6,6 +6,59 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/app_hs.css">
     <title>Sharing is caring</title>
+    <style>
+        form {
+  width: 80%;
+  margin: 0 auto;
+  padding: 20px;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  background-color: #f9f9f9;
+}
+
+label {
+  display: block;
+  margin-bottom: 10px;
+  font-size: 1.2em;
+  font-weight: bold;
+}
+
+input[type="text"], textarea {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  box-sizing: border-box;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  resize: vertical;
+}
+
+input[type="date"] {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  box-sizing: border-box;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+input[type="submit"] {
+  width: 100%;
+  background-color: #4CAF50;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+input[type="submit"]:hover {
+  background-color: #45a049;
+}
+
+    </style>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 </head>
 <body>
     <nav>
@@ -36,7 +89,53 @@
           <div>
             <h1>Sharing is caring</h1>
           </div>
-        <script src="javascript/activebutton.js"></script>
+          
+        
     </nav>
+    
+    
+    
+<form id="giveaway-form" action="sharing_is_caring.php" method="post">
+  <label for="product_description">Product Description:</label>
+  <textarea id="product_description" name="product_description" required></textarea>
+  
+  <label for="expiration_date">Expiration Date:</label>
+  <input type="date" id="expiration_date" name="expiration_date" required>
+  
+  <label for="pickup_location">Pick-up Location:</label>
+  <input type="text" id="pickup_location" name="pickup_location" required>
+  
+  <input type="submit" value="Submit Giveaway">
+</form>
+<div id="giveaways"></div>
+<script>
+    function getGiveaways() {
+        $.ajax({
+            type: "GET",
+            url: "get_giveaways.php",
+            dataType: "html",
+            success: function(response) {
+                $("#giveaways").html(response);
+            }
+        });
+    }
+    $(document).ready(function(){
+        getGiveaways();
+    });
+     $(document).ready(function(){
+            $("#giveaway-form").submit(function(event){
+                event.preventDefault();
+                $.ajax({
+                    type: "POST",
+                    url: "submit_giveaway.php",
+                    data: $("#giveaway-form").serialize(),
+                    success: function(response) {
+                        getGiveaways(); // refresh the giveaways on the page
+                        //$("#giveaways").html(response);
+                    }
+                });
+            });
+        });
+</script>
 </body>
 </html>
